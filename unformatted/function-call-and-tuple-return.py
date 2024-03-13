@@ -1,16 +1,4 @@
 def step():
-    """ This function needs a lot of explanation. For example it has 6 start values:
-    - original_address = 0xffff_ffff
-    - byte_address        = 5 << 16
-    - pm_size             = 0xffff
-    - truncate            = False
-    - overflow_saturation = True
-    - modulo_support      = False
-                            ^
-                            TODO( david ): Explain why this is not True
-
-
-    """
     original_address = 0xffff_ffff
     byte_address = 5 << 16
     pm_size = 0xffff
