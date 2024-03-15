@@ -1,17 +1,29 @@
-:e unformatted/0.py
+e unformatted/0.py
 
-:autocmd WinEnter,BufEnter * setlocal statusline=%t
-:autocmd WinLeave,BufLeave * setlocal statusline=%{expand('%:h:t')}
+autocmd WinEnter,BufEnter * setlocal statusline=%t
+autocmd WinLeave,BufLeave * setlocal statusline=%{expand('%:h:t')}
 
-:belowright  split formatted/yapf/0.py
-:belowright vsplit formatted/ruff/0.py
-:belowright vsplit formatted/autopep8/0.py
+belowright  split formatted/yapf/0.py
+belowright vsplit formatted/ruff/0.py
+belowright vsplit formatted/autopep8/0.py
 
-:norm! k
+function NextExample()
+  windo bn
+  norm! k
+endfunction
 
-:windo set scrollbind
-:nnoremap <right> <cmd>windo bn<cr>
-:nnoremap <left>  <cmd>windo bp<cr>
-:silent! autocmd! lspconfig
-:silent! LspStop
-":silent! set laststatus=3
+function PrevExample()
+  windo bp
+  norm! k
+endfunction
+
+nnoremap <right> <cmd>call NextExample()<cr>
+nnoremap <left>  <cmd>call PrevExample()<cr>
+
+windo set scrollbind
+set autochdir
+
+silent! autocmd! lspconfig
+silent! LspStop
+
+norm! k
