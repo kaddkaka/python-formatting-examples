@@ -30,6 +30,7 @@ spaces_around_subscript_colon = true"
 #nvim **/*.py
 fd .py | xargs -o $EDITOR -S <(cat << EOF
 :e unformatted/0.py
+:set statusline=%{expand('%:h:t')}
 :belowright  split formatted/yapf/0.py
 :belowright vsplit formatted/ruff/0.py
 :belowright vsplit formatted/autopep8/0.py
