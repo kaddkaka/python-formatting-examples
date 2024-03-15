@@ -28,18 +28,5 @@ spaces_around_subscript_colon = true"
 
 # globstar is not sorted per directory
 #nvim **/*.py
-fd .py | xargs -o $EDITOR -S <(cat << EOF
-:e unformatted/0.py
-:set statusline=%{expand('%:h:t')}
-:belowright  split formatted/yapf/0.py
-:belowright vsplit formatted/ruff/0.py
-:belowright vsplit formatted/autopep8/0.py
+fd .py | xargs -o $EDITOR -S present.vim
 
-:windo set scrollbind
-:nnoremap <right> <cmd>windo bn<cr>
-:nnoremap <left> <cmd>windo bp<cr>
-:silent! autocmd! lspconfig
-:silent! LspStop
-":silent! set laststatus=3
-EOF
-)
