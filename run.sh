@@ -17,6 +17,7 @@ format () {
 }
 
 format "ruff"     "ruff format --line-length=80"
+format "autopep8" "autopep8 -i --recursive ."
 format "yapf"     "yapf -i --recursive ." "
 [tool.yapf]
 based_on_style = \"google\"
@@ -31,6 +32,7 @@ fd .py | xargs -o $EDITOR -S <(cat << EOF
 :e unformatted/0.py
 :belowright  split formatted/yapf/0.py
 :belowright vsplit formatted/ruff/0.py
+:belowright vsplit formatted/autopep8/0.py
 
 :windo set scrollbind
 :nnoremap <right> <cmd>windo bn<cr>
