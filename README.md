@@ -1,6 +1,9 @@
-Example of python formatting results
+Example of python formatting results with a previewer in vim
 
-Clone and run `bash run.sh`
+1. Modify the examples under folder `unformatted/`
+2. Add/remove formatting tool in run.sh
+3. Run `bash run.sh` to format exmaples and display in vim (`$EDITOR` is assumed to be vim/nvim)
 
-![image](https://github.com/kaddkaka/python-formatting-examples/assets/4508793/b8d2ff84-83e5-416a-9e1e-e02ff842166d)
-![image](https://github.com/kaddkaka/python-formatting-examples/assets/4508793/db8d30ec-5155-4ba1-806b-e19da313eff1)
+![image](https://github.com/kaddkaka/python-formatting-examples/assets/4508793/8a1c800e-f2c7-4b40-a22c-fa5bd1636575)
+
+Step through examples with `<left>` and `<right>` (arrow keys):
