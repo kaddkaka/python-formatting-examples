@@ -25,6 +25,7 @@ column_limit = 80
 indent_width = 4
 split_penalty_for_added_line_split = 1000
 spaces_around_subscript_colon = true"
+format "pyink" "pyink --line-length=80"
 
 # globstar is not sorted per directory
 #nvim **/*.py
