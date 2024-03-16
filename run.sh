@@ -16,16 +16,17 @@ format () {
   echo "----------------------------------------"
 }
 
-format "ruff"     "ruff format --line-length=80"
-format "autopep8" "autopep8 -i --recursive ."
-format "yapf"     "yapf -i --recursive ." "
-[tool.yapf]
-based_on_style = \"google\"
-column_limit = 80
-indent_width = 4
-split_penalty_for_added_line_split = 1000
-spaces_around_subscript_colon = true"
-format "pyink" "pyink --line-length=80"
+format "black" "black --line-length=80 ."
+format "pyink" "pyink --line-length=80 ."
+format "ruff"  "ruff format --line-length=80"
+#format "autopep8" "autopep8 -i --recursive ."
+#format "yapf"     "yapf -i --recursive ." "
+#[tool.yapf]
+#based_on_style = \"google\"
+#column_limit = 80
+#indent_width = 4
+#split_penalty_for_added_line_split = 1000
+#spaces_around_subscript_colon = true"
 
 # globstar is not sorted per directory
 #nvim **/*.py
