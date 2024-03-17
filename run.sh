@@ -19,7 +19,12 @@ format () {
 format "black" "black --line-length=80 ."
 format "pyink" "pyink --line-length=80 ."
 format "ruff"  "ruff format --line-length=80"
+#format "fixit" "fixit fix -a"
+#format "autoflake" "autoflake -ir ."
 #format "autopep8" "autopep8 -i --recursive ."
+#format "autopep8a" "autopep8 -i --recursive . --aggressive"
+#format "autopep8aa" "autopep8 -i --recursive . --aggressive --aggressive"
+
 #format "yapf"     "yapf -i --recursive ." "
 #[tool.yapf]
 #based_on_style = \"google\"
