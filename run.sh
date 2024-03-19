@@ -16,15 +16,12 @@ format () {
   echo "----------------------------------------"
 }
 
-format "black" "black --line-length=80 ."
-format "pyink" "pyink --line-length=80 ."
 format "ruff"  "ruff format --line-length=80 --preview"
-#format "fixit" "fixit fix -a"
-#format "autoflake" "autoflake -ir ."
-#format "autopep8" "autopep8 -i --recursive ."
-#format "autopep8a" "autopep8 -i --recursive . --aggressive"
-#format "autopep8aa" "autopep8 -i --recursive . --aggressive --aggressive"
+format "autopep8" "autopep8 -i --recursive ."
+format "autopep8a" "autopep8 -i --recursive . --aggressive"
+format "autopep8aa" "autopep8 -i --recursive . --aggressive --aggressive"
 
+# Indents some lists very strangely
 #format "yapf"     "yapf -i --recursive ." "
 #[tool.yapf]
 #based_on_style = \"google\"
@@ -32,6 +29,14 @@ format "ruff"  "ruff format --line-length=80 --preview"
 #indent_width = 4
 #split_penalty_for_added_line_split = 1000
 #spaces_around_subscript_colon = true"
+
+# Uninteresting in comparison with ruff format
+#format "black" "black --line-length=80 ."
+#format "pyink" "pyink --line-length=80 ."
+
+# Does not do enough formatting
+#format "fixit" "fixit fix -a"
+#format "autoflake" "autoflake -ir ."
 
 # globstar is not sorted per directory
 #nvim **/*.py
