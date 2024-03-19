@@ -1,6 +1,6 @@
 DATA = {
-    "a":    0xf000,
-    "bb":   0xf000,
-    "cccc": 0xf000,
-    "ddd":  0xf000,
+    "aa":       0x000F,
+    "bbbb":     0x00F0,
+    "cccccccc": 0x0F00,
+    "dddddd":   0xF000,
 }
