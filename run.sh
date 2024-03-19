@@ -17,9 +17,9 @@ format () {
 }
 
 format "ruff"  "ruff format --line-length=80 --preview"
-format "autopep8" "autopep8 -i --recursive ."
-format "autopep8a" "autopep8 -i --recursive . --aggressive"
-format "autopep8aa" "autopep8 -i --recursive . --aggressive --aggressive"
+format "autopep8"   "autopep8 -i --recursive --max-line-length=80 ."
+format "autopep8a"  "autopep8 -i --recursive --max-line-length=80 . --aggressive"
+format "autopep8aa" "autopep8 -i --recursive --max-line-length=80 . --aggressive --aggressive"
 
 # Indents some lists very strangely
 #format "yapf"     "yapf -i --recursive ." "
