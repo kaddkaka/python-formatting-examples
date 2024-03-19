@@ -18,7 +18,7 @@ format () {
 
 format "black" "black --line-length=80 ."
 format "pyink" "pyink --line-length=80 ."
-format "ruff"  "ruff format --line-length=80"
+format "ruff"  "ruff format --line-length=80 --preview"
 #format "fixit" "fixit fix -a"
 #format "autoflake" "autoflake -ir ."
 #format "autopep8" "autopep8 -i --recursive ."
