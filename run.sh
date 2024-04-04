@@ -38,7 +38,4 @@ format "autopep8aa" "autopep8 -i --recursive --max-line-length=80 . --aggressive
 #format "fixit" "fixit fix -a"
 #format "autoflake" "autoflake -ir ."
 
-# globstar is not sorted per directory
-#nvim **/*.py
-fd .py | xargs -o $EDITOR -S present.vim
-
+LC_ALL=1 ls unformatted/*.py formatted/*/*.py | xargs -o $EDITOR -S present.vim
